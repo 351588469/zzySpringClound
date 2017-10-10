@@ -16,3 +16,7 @@ spring:
           password: zhengyang940830
       #配置仓库的分支
       label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
