@@ -1,0 +1,72 @@
+#Root Category
+#log4j.rootLogger = debug,stdout,D,E,I
+log4j.rootLogger = debug,stdout,D,E,I
+
+#Console
+log4j.appender.stdout = org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target = System.out
+log4j.appender.stdout.layout = org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%l %p - %m%n
+#log4j.appender.stdout.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%c %p - %m%n
+
+#DEBUG
+#log4j.appender.D = org.apache.log4j.DailyRollingFileAppender
+log4j.appender.D = org.apache.log4j.RollingFileAppender
+log4j.appender.D.File = /Users/zhaozhengyang/Documents/work/x9/git/Zzy/zzy-logs/zuul-debug.log
+log4j.appender.D.Append = true
+log4j.appender.D.MaxFileSize = 40MB
+log4j.appender.D.MaxBackupIndex = 1000
+log4j.appender.D.Threshold = DEBUG
+log4j.appender.D.layout = org.apache.log4j.PatternLayout
+log4j.appender.D.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%l %p - %m%n
+#log4j.appender.D.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%c %p - %m%n
+
+#ERROR
+#log4j.appender.E = org.apache.log4j.DailyRollingFileAppender
+log4j.appender.E = org.apache.log4j.RollingFileAppender
+log4j.appender.E.File = /Users/zhaozhengyang/Documents/work/x9/git/Zzy/zzy-logs/zuul-error.log
+log4j.appender.E.Append = true
+log4j.appender.E.MaxFileSize = 10MB
+log4j.appender.E.MaxBackupIndex = 1000
+log4j.appender.E.Threshold = ERROR
+log4j.appender.E.layout = org.apache.log4j.PatternLayout  
+log4j.appender.E.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%l %p - %m%n
+#log4j.appender.E.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%c %p - %m%n
+
+INFO
+log4j.appender.I = org.apache.log4j.RollingFileAppender
+log4j.appender.I.File =/Users/zhaozhengyang/Documents/work/x9/git/Zzy/zzy-logs/zuul-info.log
+log4j.appender.I.Append = true
+log4j.appender.I.Threshold = INFO
+log4j.appender.I.layout = org.apache.log4j.PatternLayout
+log4j.appender.I.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%l %p - %m%n
+#log4j.appender.I.layout.ConversionPattern = [%d{dd MMM HH:mm:ss}]%c %p - %m%n
+
+#IBATIS Category
+log4j.logger.com.ibatis = DEBUG
+log4j.logger.com.ibatis.common.jdbc.SimpleDataSource = DEBUG
+log4j.logger.com.ibatis.common.jdbc.ScriptRunner = DEBUG
+log4j.logger.com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate = DEBUG
+log4j.logger.java.sql.Connection = DEBUG
+log4j.logger.java.sql.Statement = DEBUG
+log4j.logger.java.sql.PreparedStatement = DEBUG
+log4j.logger.java.sql.ResultSet = DEBUG
+
+#WS Logger for reporting
+#log4j.logger.WS=INFO,WS
+#log4j.appender.WS=org.apache.log4j.DailyRollingFileAppender
+#log4j.appender.WS.File=${catalina.base}/logs/X9-Rdi-INFO.log
+#log4j.appender.WS.layout=org.apache.log4j.PatternLayout
+#log4j.appender.WS.DatePattern  ='.'yyyy-MM-dd
+#log4j.appender.WS.layout.ConversionPattern=[%d{dd MMM HH:mm:ss}]%l %p - %m%n
+
+#Other Logger
+log4j.logger.noModule = FATAL
+log4j.logger.com.opensymphony = INFO
+log4j.logger.org.apache.struts2 = DEBUG
+log4j.logger.org.springframework = INFO
+log4j.logger.org.aspectj = DEBUG
+log4j.logger.com.ibatis.db = INFO  
+log4j.logger.net.sf.ehcache = ERROR
+#log4j.logger.net.sf.json=ERROR
+#log4j.logger.org.apache.cxf=DEBUG,WS
