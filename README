@@ -1,0 +1,7 @@
+8761->eurekaServer
+8762,8763->eurekaClient http://localhost:8762/client?name=zzy
+8764->ribbon->http://localhost:8764/link?name=zzy || http://localhost:8764/hystrix
+8765->feign->http://localhost:8765/link?name=zzy  || http://localhost:8765/hystrix
+8766->zuul->http://localhost:8766/a/link?name=zzy&token=1
+8767->config-server->http://localhost:8767/zzy/zzy
+8768->config-client->http://localhost:8768/config

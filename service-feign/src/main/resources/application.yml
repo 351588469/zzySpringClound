@@ -7,3 +7,9 @@ server:
 spring:
   application:
     name: zzyFeign
+feign:
+  httpclient:
+    enabled: true
+  hystrix:
+    #Feign是自带断路器的，在D版本的Spring Cloud中，它没有默认打开
+    enabled: true
