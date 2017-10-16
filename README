@@ -1,3 +1,4 @@
+idea: file->new->moudle from exist...->eureka-server->open->import...->maven
 8761->eurekaServer
 8762,8763->eurekaClient http://localhost:8762/client?name=zzy
 8764->ribbon->http://localhost:8764/link?name=zzy || http://localhost:8764/hystrix
