@@ -12,19 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableEurekaClient
 @RefreshScope//重新初始化并载入新的配置内容
-public class ConfigClientApplication {
+public class ConfigClient2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigClientApplication.class, args);
+		SpringApplication.run(ConfigClient2Application.class, args);
 	}
 
 	@Value("${foo}")
 	String foo;
 
-	/**
-	 * 加入SpringCloudBus后可以不用重启服务器获取最新配置->localhost:8768/bus/refresh
-	 * http://localhost:8768/bus/refresh?destination=config-client:**->刷新服务名为config-client的所有服务
-	 */
 	@RequestMapping(value = "/config")
 	public String hi(){
 		return foo;

@@ -1,4 +1,5 @@
-idea: file->new->moudle from exist...->eureka-server->open->import...->maven
+tip: idea: file->new->moudle from exist...->eureka-server->open->import...->maven
+     rename moudle's filename need rebuild moudle
 8761->eurekaServer
 8762,8763->eurekaClient http://localhost:8762/client?name=zzy
 8764->ribbon->http://localhost:8764/link?name=zzy || http://localhost:8764/hystrix
@@ -10,5 +11,5 @@ idea: file->new->moudle from exist...->eureka-server->open->import...->maven
     /{label}/{application}-{profile}.yml
     /{application}-{profile}.properties
     /{label}/{application}-{profile}.properties
-8768->config-client->http://localhost:8768/config
+8768,8769->config-client->http://localhost:8768/config
 
