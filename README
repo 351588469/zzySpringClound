@@ -12,4 +12,5 @@ tip: idea: file->new->moudle from exist...->eureka-server->open->import...->mave
     /{application}-{profile}.properties
     /{label}/{application}-{profile}.properties
 8768,8769->config-client->http://localhost:8768/config
-
+8770->zipkinServer
+8771,8772->zipkinClient
