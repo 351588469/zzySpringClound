@@ -2,3 +2,5 @@ vim /etc/hosts->127.0.0.1  localhost server1 server2 server3 server
 application.yml中的spring.profiles.active属性指向不同的子配置文件(eureka.instance.hostname)
 edit onfigurations->actice profiles同可指向子配置而无需修改母配置文件
 三个server起始报错为正常现象，当三个服务全部开启后才能互相完成注册。
+
+docker使用失败，待到书到货再干！
